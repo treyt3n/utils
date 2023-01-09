@@ -17,7 +17,7 @@ def get_parts(code: str):
     :returns  : A list of parts
     """
     
-    params = params.replace('{embed}', '')
+    params = code.replace('{embed}', '')
     return [p[1:][:-1] for p in params.split('$v')]
 
 
@@ -176,8 +176,8 @@ async def to_object(code: str):
         embed['fields'] = fields
         embed = discord.Embed.from_dict(embed)
 
-    if not params.count('{') and not params.count('}'):
-        content = params
+    if not code.count('{') and not code.count('}'):
+        content = code
         
     if timestamp:
         embed.timestamp = datetime.now(pytz.timezone('America/New_York'))
