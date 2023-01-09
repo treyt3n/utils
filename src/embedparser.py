@@ -35,7 +35,7 @@ async def to_object(code: str):
     delete=None
     view = discord.ui.View()
 
-    for part in get_parts(params):
+    for part in get_parts(code):
 
         if part.startswith('content:'):
             content = part[len('content:'):]
