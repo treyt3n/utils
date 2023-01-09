@@ -1,5 +1,6 @@
 """
 A discord.py embed parser.
+Made to work with https://rival.rocks/embed
 This could've definitely been written better but it works.
 
 Example :: await ctx.reply(**await to_object(embedcode))
