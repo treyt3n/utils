@@ -134,7 +134,7 @@ async def to_object(code: str):
             except:
                 pass
                 
-            x['footer'] = {'text': text}
+            embed['footer'] = {'text': text}
             if icon_url:
                 embed['footer']['icon_url'] = icon_url
 
