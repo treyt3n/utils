@@ -90,7 +90,7 @@ async def to_object(code: str):
             except:
                 name = None
 
-            x['author'] = {'name': name}
+            embed['author'] = {'name': name}
             if icon_url:
                 embed['author']['icon_url'] = icon_url
             if url:
